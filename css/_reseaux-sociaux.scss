@@ -1,0 +1,70 @@
+@use 'variables';
+
+.instagram-follow {
+  background-color: lighten(variables.$secondary-color, 15%);
+  padding: variables.$section-padding;
+  text-align: center;
+  color: variables.$primary-color;
+
+  h2 {
+    font-family: variables.$font-titles;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: variables.$font-body;
+  }
+
+  .btn-insta {
+    display: inline-block;
+    background-color: variables.$primary-color;
+    color: variables.$text-light;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: darken(variables.$primary-color, 10%);
+    }
+  }
+
+  // Responsive tablette
+  @media (max-width: variables.$tablet) {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  // Responsive mobile
+  @media (max-width: variables.$mobile) {
+    padding: 2.5rem 1rem;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    .btn-insta {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+}

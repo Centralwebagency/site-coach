@@ -1,0 +1,162 @@
+@use 'variables';
+
+.container {
+  overflow: visible; // Important pour que les flèches hors bloc soient visibles
+}
+
+.services {
+  padding: variables.$section-padding;
+  background-color: variables.$background-color;
+  color: variables.$text-color;
+  font-family: variables.$font-body;
+  text-align: center;
+
+  h2 {
+    font-family: variables.$font-titles;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: variables.$primary-color;
+  }
+
+  .services-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto;
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .service-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      background: variables.$secondary-color;
+      border-radius: variables.$border-radius;
+      padding: 2.5rem 2rem;
+      box-shadow: variables.$box-shadow;
+      color: variables.$primary-color;
+
+      h3 {
+        font-family: variables.$font-titles;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        max-width: 85%;
+        margin: 0 auto;
+      }
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3rem;
+      height: 3rem;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      color: variables.$text-light;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: variables.$box-shadow;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      &.prev {
+        left: 0.5rem;
+      }
+
+      &.next {
+        right: 0.5rem;
+      }
+    }
+  }
+}
+
+/* Responsive */
+
+@media (max-width: variables.$tablet) {
+  .services {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .services-carousel {
+      max-width: 100%;
+
+      .service-item {
+        padding: 2rem 1.5rem;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          max-width: 90%;
+        }
+      }
+
+      .carousel-btn {
+        width: 2.7rem;
+        height: 2.7rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: variables.$mobile) {
+  .services-carousel {
+    overflow: visible; /* Important */
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.5rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      color: variables.$text-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 20;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      &.prev {
+        left: -1.5rem;  /* Flèche à gauche hors du bloc */
+        right: auto;    /* IMPORTANT : enlever la valeur right */
+      }
+
+      &.next {
+        right: -1.5rem; /* Flèche à droite hors du bloc */
+        left: auto;     /* IMPORTANT : enlever la valeur left */
+      }
+    }
+  }
+}

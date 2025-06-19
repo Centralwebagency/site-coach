@@ -1,0 +1,72 @@
+@use 'variables';
+
+// 🧱 Container global
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// 🎬 Section Exemples de sites
+.examples {
+  padding: variables.$section-padding;
+  background-color: #fefefe;
+
+  h2 {
+    font-family: variables.$font-titles;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    text-align: center;
+    font-family: variables.$font-body;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+
+    .video {
+      text-align: center;
+
+      video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: variables.$border-radius;
+        box-shadow: variables.$box-shadow;
+      }
+
+      h3 {
+        margin-top: 1rem;
+        font-family: variables.$font-titles;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  // 🔁 Responsive tablette
+  @media (max-width: variables.$tablet) {
+    .video-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // 📱 Responsive mobile
+  @media (max-width: variables.$mobile) {
+    .video-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}

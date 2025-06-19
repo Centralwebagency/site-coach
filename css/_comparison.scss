@@ -1,0 +1,86 @@
+@use 'variables';
+
+.comparison {
+  padding: variables.$section-padding;
+  background-color: variables.$background-color;
+  text-align: center;
+
+  h2 {
+    font-family: variables.$font-titles;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: variables.$primary-color;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 1rem;
+
+    th,
+    td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: variables.$secondary-color;
+      color: variables.$primary-color;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #fff;
+      color: variables.$text-color;
+      text-align: center;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+/* Tablette */
+@media (max-width: variables.$tablet) {
+  .comparison {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
+    table {
+      display: block;
+      overflow-x: auto;
+      width: 100%;
+      font-size: 0.85rem;
+      border-spacing: 0;
+      white-space: nowrap; /* évite les retours à la ligne */
+
+      th,
+      td {
+        padding: 0.6rem 0.8rem;
+        text-align: center;
+        min-width: 120px; /* taille minimale pour chaque colonne */
+      }
+
+      th {
+        background-color: variables.$secondary-color;
+        color: variables.$primary-color;
+        font-weight: bold;
+      }
+
+      td {
+        background-color: #fff;
+        color: variables.$text-color;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+

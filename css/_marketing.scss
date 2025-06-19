@@ -1,0 +1,90 @@
+@use 'variables';
+
+.why-us {
+  padding: variables.$section-padding;
+  background-color: variables.$background-color;
+  text-align: center;
+
+  h2 {
+    font-family: variables.$font-titles;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    color: variables.$primary-color;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .advantage {
+    text-align: left;
+    background: #ffffff;
+    border-left: 5px solid variables.$secondary-color;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: variables.$primary-color;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: variables.$text-color;
+      margin: 0;
+    }
+  }
+}
+
+/* Tablette */
+@media (max-width: variables.$tablet) {
+  .why-us {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 2.1rem;
+    }
+
+    .advantage {
+      padding: 1.3rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: variables.$mobile) {
+  .why-us {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
+    .advantage {
+      padding: 1.2rem;
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+

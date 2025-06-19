@@ -1,0 +1,32 @@
+@use 'variables';
+@use 'hero';
+@use 'animations';
+@use 'services';
+@use 'examples';
+@use 'marketing';
+@use 'comparison';
+@use 'contact';
+@use 'reseaux-sociaux';
+@use 'footer';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; // ✅ évite les débordements
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: variables.$font-body;
+  color: variables.$text-color;
+  background-color: variables.$background-color;
+}
+
+
+
+
