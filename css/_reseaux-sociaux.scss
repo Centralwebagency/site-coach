@@ -10,6 +10,7 @@
     font-family: variables.$font-titles;
     font-size: 2.2rem;
     margin-bottom: 1rem;
+    color: variables.$text-light;
   }
 
   p {
@@ -19,11 +20,12 @@
     margin-left: auto;
     margin-right: auto;
     font-family: variables.$font-body;
+    color: variables.$text-light;
   }
 
   .btn-insta {
     display: inline-block;
-    background-color: variables.$primary-color;
+    background-color: rgb(119, 119, 121);
     color: variables.$text-light;
     padding: 1rem 2rem;
     border-radius: 50px;

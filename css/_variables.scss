@@ -1,20 +1,20 @@
-// 📦 Couleurs
-$primary-color: #1e1e1e;
-$secondary-color: #e8c4c4;
-$background-color: #fffaf9;
-$text-color: #222;
-$text-light: #ffffff;
+// 🎨 Couleurs version coach sportif
+$primary-color: #0a0a23; // Bleu très foncé (presque noir)
+$secondary-color: #0d0e23;
+$background-color: #f5f5f5; // Fond clair propre
+$text-color: #1e1e1e; // Texte principal sombre mais lisible
+$text-light: #ffffff; // Texte clair (sur fond sombre ou bouton)
 
-// 🖋️ Polices
-$font-titles: 'Playfair Display', serif;
+// ✍️ Polices
+$font-titles: 'Permanent Marker', cursive; // 🟢 Garde ton style
 $font-body: 'Poppins', sans-serif;
 
-// 📱 Breakpoints (uniquement tablette et mobile)
+// 📱 Breakpoints
 $tablet: 768px;
 $mobile: 480px;
 
 // 📐 Tailles utiles
 $section-padding: 4rem 2rem;
-$border-radius: 30px;
-$box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+$border-radius: 20px;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 

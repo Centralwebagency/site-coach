@@ -43,6 +43,7 @@
         font-family: variables.$font-titles;
         font-size: 1.8rem;
         margin-bottom: 1rem;
+        color: variables.$text-light;
       }
 
       p {
@@ -50,6 +51,7 @@
         line-height: 1.5;
         max-width: 85%;
         margin: 0 auto;
+        color: variables.$text-light;
       }
     }
 
